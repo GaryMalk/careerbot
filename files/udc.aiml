@@ -1,0 +1,593 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <category>
+    <pattern>*</pattern>
+    <template>I have no answer for that.</template>
+  </category>
+
+<category>
+    <pattern>^ HI ^</pattern>
+    <template><srai>HELLO</srai></template>
+</category>
+
+<category>
+    <pattern>MY NAME IS *</pattern>
+    <template>
+        <think><set name="name"><star/></set></think>
+        <srai>HELLO</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>WHAT IS YOUR NAME</pattern>
+    <template>
+        I'm the Careerbot. 😀  I'd love to chat with you about Computer Science careers. 
+        <srai>START</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>^ HELLO ^</pattern>
+    <template>
+        <condition name="name">
+            <li value="unknown">Hi!</li>
+            <li>Hi <formal><get name="name"/></formal>!</li>
+        </condition>
+        <srai>START</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>START</pattern>
+    <template> Want to check out careers in Computer Science?
+        <reply>
+            <text>Yes</text>
+            <postback>CODE</postback>
+        </reply>
+        <reply>
+            <text>No</text>
+            <postback>GOODBYE</postback>
+        </reply>
+    </template>
+</category>
+
+<category>
+    <pattern>^ BYE ^</pattern>
+    <template><srai>GOODBYE</srai></template>
+</category>
+
+<category>
+    <pattern>SEE YOU LATER</pattern>
+    <template><srai>GOODBYE</srai></template>
+</category>
+
+
+<category>
+    <pattern>CATCH YOU LATER</pattern>
+    <template><srai>GOODBYE</srai></template>
+</category>
+
+<category>
+    <pattern>TTFN</pattern>
+    <template><srai>GOODBYE</srai></template>
+</category>
+
+<category>
+    <pattern>^ GOODBYE ^</pattern>
+    <template>
+        <random>
+            <li>Goodbye then, thanks for stopping by.</li>
+            <li>Bye, come back anytime</li>
+            <li>Come back if you want to learn more.</li>
+            <li>Catch you later.  I'm available anytime.</li>
+        </random>
+    </template>
+</category>
+
+<category>
+    <pattern>^ JOB ^</pattern>
+    <template><srai>CAREERS</srai></template>
+</category>
+
+<category>
+    <pattern>^ JOBS ^</pattern>
+    <template><srai>CAREERS</srai></template>
+</category>
+
+<category>
+    <pattern>^ CAREER ^</pattern>
+    <template><srai>CAREERS</srai></template>
+</category>
+
+<category>
+    <pattern>^ CAREERS ^</pattern>
+    <template>
+        What type of career are you interested in?
+        <reply>
+            <text>Project Management</text>
+            <postback>PROJECT MANAGEMENT</postback>
+        </reply>
+        <reply>
+            <text>Programming</text>
+            <postback>PROGRAMMING</postback>
+        </reply>
+        <reply>
+            <text>Testing</text>
+            <postback>TESTING</postback>
+        </reply>
+        <reply>
+            <text>Web Developer</text>
+            <postback>WEB DEVELOPER</postback>
+        </reply>
+        <reply>
+            <text>db Admin</text>
+            <postback>DB ADMIN</postback>
+        </reply>
+        <reply>
+            <text>SDET</text>
+            <postback>SDET</postback>
+        </reply>
+        <reply>
+            <text>All</text>
+            <postback>ALLCARDS</postback>
+        </reply>
+        <reply>
+            <text>Don't Know</text>
+            <postback>CODE</postback>
+        </reply>
+    </template>
+</category>
+
+<category>
+    <pattern>ALLCARDS</pattern>
+    <template>Browse through these careers
+        <srai>SHOWCARDS</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>PROJECT MANAGEMENT</pattern>
+    <template>
+        <think><set name="it">PROJECT MANAGEMENT</set></think>
+        <card>
+            <image>https://www.projectmanager.com/wp-content/uploads/2019/03/project-management-software-for-mac.jpg?size=200</image>
+            <title>Project Management</title>
+            <subtitle>Planning, scheduling, resourcing, coordinating, and deliving.</subtitle>
+            <button>
+                <text>PM</text>
+                <url>https://en.wikipedia.org/wiki/Software_project_management</url>
+            </button>
+            </card>
+    </template>
+</category>
+
+<category>
+    <pattern>PROGRAMMING</pattern>
+    <template>
+        <think><set name="it">PROGRAMMING</set></think>
+        <card>
+            <image>https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fspecials-images.forbesimg.com%2Fdam%2Fimageserve%2F1106530967%2F960x0.jpg?size=200</image>
+            <title>Programming</title>
+            <subtitle>Design, code, and support with updates.</subtitle>
+            <button>
+                <text>Dev</text>
+                <url>https://en.wikipedia.org/wiki/Computer_programming</url>
+            </button>
+        </card>
+    </template>
+</category>
+
+<category>
+    <pattern>WEB DEVELOPER</pattern>
+    <template>
+        <think><set name="it">WEB DEVELOPER</set></think>
+        <card>
+            <image>https://toggl.com/blog/wp-content/uploads/2017/09/web-development-portfolio.jpg?size=200</image>
+            <title>Web Developer</title>
+            <subtitle>Create web pages with JavaScript &amp; HTML.</subtitle>
+            <button>
+                <text>Web Dev</text>
+                <url>https://en.wikipedia.org/wiki/Web_developer</url>
+            </button>
+        </card>
+    </template>
+</category>
+
+<category>
+    <pattern>DB ADMIN</pattern>
+    <template>
+        <srai>DATABASE ADMINISTRATOR</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>DB ADMINISTRATOR</pattern>
+    <template>
+        <srai>DATABASE ADMINISTRATOR</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>DATABASE ADMINISTRATOR</pattern>
+    <template>
+        <think><set name="it">DB ADMI</set></think>
+        <card>
+            <image>https://dv-website.s3.amazonaws.com/uploads/2020/04/kf_sywtbdba_04092020.jpg?size=200</image>
+            <title>dB Adminstrator</title>
+            <subtitle>Design &amp; Manage Databases</subtitle>
+            <button>
+                <text>dB Admin</text>
+                <url>https://www.careerexplorer.com/careers/database-administrator/</url>
+            </button>
+        </card>
+    </template>
+</category>
+
+<category>
+    <pattern>TESTING</pattern>
+    <template>
+        <think><set name="it">TESTING</set></think>
+        <card>
+            <image>https://5.imimg.com/data5/RY/UR/MY-2/software-testing-500x500.jpg?size=200</image>
+            <title>SOFTWARE TESTING</title>
+            <subtitle>Find bugs, verify functionality, assure quality.</subtitle>
+            <button>
+                <text>QA</text>
+                <url>https://en.wikipedia.org/wiki/Software_testing</url>
+            </button>
+        </card>
+    </template>
+</category>
+
+<category>
+    <pattern>SDET</pattern>
+    <template>
+        <think><set name="it">SDET</set></think>
+        <card>
+            <image>http://gorillalogic.com/wp-content/uploads/2013/09/Screen-Shot-2016-08-31-at-9.35.42-AM-1.png?size=200</image>
+            <title>SOFTWARE TESTING</title>
+            <subtitle>Automation &amp; Tools to find bugs and verify functionality</subtitle>
+            <button>
+                <text>SDET</text>
+                <url>https://www.guru99.com/software-developer-engineer-test-sdet.html</url>
+            </button>
+        </card>
+    </template>
+</category>
+
+<category>
+    <pattern>^ CODE ^</pattern>
+    <template>Let's get started. 
+        <condition name="code">
+            <li value="unknown"> <srai>ASKCODE</srai></li>
+            <li value="yes"> Since you've said you want to write code, let's look at those opportunities.<br/><srai>YESCODE</srai></li>
+            <li value="no"> Since you've said you don't want to write code, let's positions that don't require it.<br/><srai>NOCODE</srai></li>
+        </condition>
+    </template>
+</category>
+
+<category>
+    <pattern>ASKCODE</pattern>
+    <template> Do you want to write code?
+        <reply>
+            <text>Yes</text>
+            <postback>YESCODE</postback>
+        </reply>
+        <reply>
+            <text>No</text>
+            <postback>NOCODE</postback>
+        </reply>
+    </template>
+</category>
+
+<category>
+    <pattern>^ WANT TO WRITE CODE</pattern>
+    <template><srai>YESCODE</srai></template>
+</category>
+
+<category>
+    <pattern>^ DO NOT WANT TO WRITE CODE</pattern>
+    <template><srai>NOCODE</srai></template>
+</category>
+
+<category>
+    <pattern>^ DON'T WANT TO WRITE CODE</pattern>
+    <template><srai>NOCODE</srai></template>
+</category>
+
+<category>
+    <pattern>^ NO CODE ^</pattern>
+    <template><srai>NOCODE</srai></template>
+</category>
+
+<category>
+    <pattern>YESCODE</pattern>
+    <template>Perhaps a position in software development would suit you.  Are you more interested in creating the finished product for customers, 
+    or creating the automation and tools for testing?
+    <think><set name="code">yes</set></think>
+        <reply>
+            <text>Product Code</text>
+            <postback>PRODUCTCODE</postback>
+        </reply>
+        <reply>
+            <text>Test Code</text>
+            <postback>TESTCODE</postback>
+        </reply>
+    </template>
+</category>
+
+<category>
+    <pattern>PRODUCTCODE</pattern>
+    <template>Great, there's lots of options. Do you like working on the frontend user interface, or more the backend data?
+        <reply>
+            <text>UI</text>
+            <postback>UI</postback>
+        </reply>
+        <reply>
+            <text>Data</text>
+            <postback>DATA</postback>
+        </reply>
+        <reply>
+            <text>Full Stack</text>
+            <postback>FULLSTACK</postback>
+        </reply>
+    </template>
+</category>
+
+<category>
+    <pattern>FULLSTACK</pattern>
+    <template>A bit of everything, right?  Fantastic.  Check this out.
+        <srai>PROGRAMMING</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>TESTCODE</pattern>
+    <template>Test tools and automation code are written by Software Developers in Test (SDET)
+        <srai>SDET</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>UI</pattern>
+    <template>Front end work is done by web developers, using HTML, JavaScript, and other web technologies.
+        <srai>WEB DEVELOPER</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>DATA</pattern>
+    <template>Database administrators design, build, administer, and maintain databases and db servers.
+        <srai>DB ADMIN</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>NOCODE</pattern>
+    <template>Are you more interested in management, or in testing?
+    <think><set name="code">no</set></think>
+        <reply>
+            <text>Management</text>
+            <postback>PM</postback>
+        </reply>
+        <reply>
+            <text>Testing</text>
+            <postback>TEST</postback>
+        </reply>
+    </template>
+</category>
+
+<category>
+    <pattern>PM</pattern>
+    <template>Project management in software concerns project planning, scheduling, resourcing, and product delivery,
+    and the coordinating between all the people that makes those tasks happen.
+        <srai>PROJECT MANAGEMENT</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>TEST</pattern>
+    <template>Software Testing is to verify functionality as well as non-functional objectives, 
+    such as security &amp; performance, and to search for defects, or bugs.
+        <srai>TESTING</srai>
+    </template>
+</category>
+
+
+<category>
+    <pattern>^ MORE ABOUT ^ DEVELOPMENT</pattern>
+    <template>MORE ABOUT PROGRAMMING</template>
+</category>
+
+<category>
+    <pattern>^ MORE ABOUT ^ PROGRAMMING</pattern>
+    <template>Computer Software Programming is about instructing the computer to perform certain tasks. A career software developer
+    designs, analyzes, and writes executable code.  One popular paradigm divides coding into the  front end user interface, such as a web page,
+    the back end data storage and retrieval, and the middle tier which retrieves or stores data in the back end, works with models and business
+    rules to perform certain tasks, and then presents a view for the front end to display to the user.
+    </template>
+</category>
+
+<category>
+    <pattern>^ MORE ABOUT ^ WEB DEVELOPMENT</pattern>
+    <template><srai>MORE ABOUT WEB DEVELOPER</srai></template>
+</category>
+
+<category>
+    <pattern>^ MORE ABOUT ^ WEB DEVELOPER</pattern>
+    <template>A Web Developer designs a website from the wireframes provided by program management and the UX designer.  Many modern websites
+    are written in JavaScript frameworks such as React or Angular.  One popular development model is MVC, for Model-View-Controller.  The
+    web dev uses the models, views, and controllers provided by the middle tier and creates web pages to present the view to the user.
+    </template>
+</category>
+
+<category>
+    <pattern>^ MORE ABOUT ^ PROJECT MANAGEMENT</pattern>
+    <template>Project Management involves planning every aspect of a software development project.  The Project Manager must have
+    excellent communication skills as he/she will work with all members of the team. The PM gathers requirements, creates specifications,
+    does the scheduling, budgeting, and often hiring of project resources. The PM works with the developers and testers to ensure that they
+    have done the proper planning, assesses risks, and monitors progress.</template>
+</category>
+
+<category>
+    <pattern>^ MORE ABOUT ^ TESTER</pattern>
+    <template><srai>MORE ABOUT TESTING</srai></template>
+</category>
+
+<category>
+    <pattern>^ MORE ABOUT ^ TESTING</pattern>
+    <template>Testing is the science and the art of verifying functionality and finding bugs. The tester works with the requirements,
+    specifications, and design documentation to create the test plan and the test cases. A test case is a set of steps followed by a
+    verification. Testers goes beyond test cases to seek out of bugs, often pushing a program to do things the developer did not intend,
+    to see if there are negative consequences. For example, if a dialog requests a number be entered, an error test may be to enter a
+    letter instead. If the user gets an error message, the test passes. If the program crashes, the test fails and an important bug
+    has been discovered. Testing also includes performance metrics, such as testing a website under an extreme load, and security testing,
+    where the tester looks for code that can be exploited by a malicious user.</template>
+</category>
+
+<category>
+    <pattern>^ MORE ABOUT ^ DB ADMINISTRATION</pattern>
+    <template><srai>MORE ABOUT DB ADMIN</srai></template>
+</category>
+
+<category>
+    <pattern>^ MORE ABOUT ^ DATABASE ADMIN</pattern>
+    <template><srai>MORE ABOUT DB ADMIN</srai></template>
+</category>
+
+<category>
+    <pattern>^ MORE ABOUT ^ DATABASE ADMINISTRATION</pattern>
+    <template><srai>MORE ABOUT DB ADMIN</srai></template>
+</category>
+
+<category>
+    <pattern>^ MORE ABOUT ^ DB ADMIN</pattern>
+    <template>A Database Administrator takes the requirements and the business rules gathered from the business and creates a model
+    for the data, sometimes in the form of an ERD (Entity Relationship Diagram). From this, the databases can be designed and
+    created on the db server. The dB Administrator also installs/upgrades/maintains the dB servers, implements the security
+    required by the business, and administers access to the server and dB.</template>
+</category>
+
+<category>
+    <pattern>^ MORE ABOUT ^ SOFTWARE DEVELOPER IN TEST</pattern>
+    <template><srai>MORE ABOUT SDET</srai></template>
+</category>
+
+<category>
+    <pattern>^ MORE ABOUT ^ SDET</pattern>
+    <template>An SDET has the skillsets of both a developer and a tester.  An SDET writes test tools and test automation, which could be in many
+    forms: API, UI, Performance, and Security are widely used examples.  The same coding best practices regarding design, code reviews,
+    maintainability, source control, etc., from the programming discipline apply here, and the testing best practices regarding
+    equivalence classes, boundary conditions, error checking, etc., also apply.  SDETs automate testing to increase the testing matrix,
+    reduce time to market, and provide faster feedback to development and program management.</template>
+</category>
+
+<category>
+    <pattern>TELL ME MORE ABOUT *</pattern>
+    <template><srai>MORE ABOUT <star/></srai></template>
+</category>
+
+<category>
+    <pattern>TELL ME MORE</pattern>
+    <template><srai>MORE ABOUT IT</srai></template>
+</category>
+
+<category>
+    <pattern>^ MORE ABOUT IT</pattern>
+    <template>
+        <condition name="it">
+            <li value="unknown">More about what?
+              <reply>
+                  <text>Project Management</text>
+                  <postback>MORE ABOUT PROJECT MANAGEMENT</postback>
+              </reply>
+              <reply>
+                  <text>Programming</text>
+                  <postback>MORE ABOUT PROGRAMMING</postback>
+              </reply>
+              <reply>
+                  <text>Testing</text>
+                  <postback>MORE ABOUT TESTING</postback>
+              </reply>
+              <reply>
+                  <text>Web Developer</text>
+                  <postback>MORE ABOUT WEB DEVELOPER</postback>
+              </reply>
+              <reply>
+                  <text>db Admin</text>
+                  <postback>MORE ABOUT DB ADMIN</postback>
+              </reply>
+              <reply>
+                  <text>SDET</text>
+                  <postback>MORE ABOUT SDET</postback>
+              </reply>
+            </li>
+            <li><srai>more about <get name="it"/></srai></li>
+        </condition>
+    </template>
+</category>
+
+<category>
+    <pattern>SHOWCARDS</pattern>
+    <template>
+        <carousel>
+            <card>
+                <image>https://www.projectmanager.com/wp-content/uploads/2019/03/project-management-software-for-mac.jpg?size=200</image>
+                <title>Project Management</title>
+                <subtitle>Planning, scheduling, resourcing, coordinating, and deliving.</subtitle>
+                <button>
+                    <text>PM</text>
+                    <url>https://en.wikipedia.org/wiki/Software_project_management</url>
+                </button>
+            </card>
+            <card>
+                <image>https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fspecials-images.forbesimg.com%2Fdam%2Fimageserve%2F1106530967%2F960x0.jpg?size=200</image>
+                <title>Programming</title>
+                <subtitle>Design, code, and support with updates.</subtitle>
+                <button>
+                    <text>Dev</text>
+                    <url>https://en.wikipedia.org/wiki/Computer_programming</url>
+                </button>
+            </card>
+            <card>
+                <image>https://toggl.com/blog/wp-content/uploads/2017/09/web-development-portfolio.jpg?size=200</image>
+                <title>Web Developer</title>
+                <subtitle>Create web pages with JavaScript &amp; HTML.</subtitle>
+                <button>
+                    <text>Web Dev</text>
+                    <url>https://en.wikipedia.org/wiki/Web_developer</url>
+                </button>
+            </card>
+            <card>
+                <image>https://dv-website.s3.amazonaws.com/uploads/2020/04/kf_sywtbdba_04092020.jpg?size=200</image>
+                <title>dB Adminstrator</title>
+                <subtitle>Design &amp; Manage Databases</subtitle>
+                <button>
+                    <text>dB Admin</text>
+                    <url>https://www.careerexplorer.com/careers/database-administrator/</url>
+                </button>
+            </card>
+            <card>
+                <image>https://5.imimg.com/data5/RY/UR/MY-2/software-testing-500x500.jpg?size=200</image>
+                <title>SOFTWARE TESTING</title>
+                <subtitle>Find bugs, verify functionality, assure quality.</subtitle>
+                <button>
+                    <text>QA</text>
+                    <url>https://en.wikipedia.org/wiki/Software_testing</url>
+                </button>
+            </card>
+            <card>
+                <image>http://gorillalogic.com/wp-content/uploads/2013/09/Screen-Shot-2016-08-31-at-9.35.42-AM-1.png?size=200</image>
+                <title>SOFTWARE DEVELOPER IN TEST</title>
+                <subtitle>Automation &amp; Tools to find bugs and verify functionality</subtitle>
+                <button>
+                    <text>SDET</text>
+                    <url>https://www.guru99.com/software-developer-engineer-test-sdet.html</url>
+                </button>
+            </card>
+        </carousel>
+    </template>
+</category>
+
+</aiml>
+
