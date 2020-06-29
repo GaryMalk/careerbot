@@ -11,9 +11,9 @@
 </category>
 
 <category>
-    <pattern>MY NAME IS *</pattern>
+    <pattern># MY NAME IS *</pattern>
     <template>
-        <think><set name="name"><star/></set></think>
+        <think><set name="name"><star index="2"/></set></think>
         <srai>HELLO</srai>
     </template>
 </category>
@@ -33,6 +33,9 @@
             <li value="unknown">Hi!</li>
             <li>Hi <formal><get name="name"/></formal>!</li>
         </condition>
+        <condition name="started">
+            <li value="yes"> Welcome back.<br/></li>
+        </condition>
         <srai>START</srai>
     </template>
 </category>
@@ -40,6 +43,7 @@
 <category>
     <pattern>START</pattern>
     <template> Want to check out careers in Computer Science?
+    <think><set name="started">yes</set></think>
         <reply>
             <text>Yes</text>
             <postback>CODE</postback>
@@ -213,7 +217,7 @@
         <think><set name="it">DB ADMI</set></think>
         <card>
             <image>https://dv-website.s3.amazonaws.com/uploads/2020/04/kf_sywtbdba_04092020.jpg?size=200</image>
-            <title>dB Adminstrator</title>
+            <title>dB Administrator</title>
             <subtitle>Design &amp; Manage Databases</subtitle>
             <button>
                 <text>dB Admin</text>
@@ -395,12 +399,12 @@
 
 
 <category>
-    <pattern>^ MORE ABOUT ^ DEVELOPMENT</pattern>
+    <pattern>^ MORE ABOUT ^ DEVELOPMENT ^</pattern>
     <template>MORE ABOUT PROGRAMMING</template>
 </category>
 
 <category>
-    <pattern>^ MORE ABOUT ^ PROGRAMMING</pattern>
+    <pattern>^ MORE ABOUT ^ PROGRAMMING ^</pattern>
     <template>Computer Software Programming is about instructing the computer to perform certain tasks. A career software developer
     designs, analyzes, and writes executable code.  One popular paradigm divides coding into the  front end user interface, such as a web page,
     the back end data storage and retrieval, and the middle tier which retrieves or stores data in the back end, works with models and business
@@ -409,12 +413,12 @@
 </category>
 
 <category>
-    <pattern>^ MORE ABOUT ^ WEB DEVELOPMENT</pattern>
+    <pattern>^ MORE ABOUT ^ WEB DEVELOPMENT ^</pattern>
     <template><srai>MORE ABOUT WEB DEVELOPER</srai></template>
 </category>
 
 <category>
-    <pattern>^ MORE ABOUT ^ WEB DEVELOPER</pattern>
+    <pattern>^ MORE ABOUT ^ WEB DEVELOPER ^</pattern>
     <template>A Web Developer designs a website from the wireframes provided by program management and the UX designer.  Many modern websites
     are written in JavaScript frameworks such as React or Angular.  One popular development model is MVC, for Model-View-Controller.  The
     web dev uses the models, views, and controllers provided by the middle tier and creates web pages to present the view to the user.
@@ -422,7 +426,7 @@
 </category>
 
 <category>
-    <pattern>^ MORE ABOUT ^ PROJECT MANAGEMENT</pattern>
+    <pattern>^ MORE ABOUT ^ PROJECT MANAGEMENT ^</pattern>
     <template>Project Management involves planning every aspect of a software development project.  The Project Manager must have
     excellent communication skills as he/she will work with all members of the team. The PM gathers requirements, creates specifications,
     does the scheduling, budgeting, and often hiring of project resources. The PM works with the developers and testers to ensure that they
@@ -430,12 +434,12 @@
 </category>
 
 <category>
-    <pattern>^ MORE ABOUT ^ TESTER</pattern>
+    <pattern>^ MORE ABOUT ^ TESTER ^</pattern>
     <template><srai>MORE ABOUT TESTING</srai></template>
 </category>
 
 <category>
-    <pattern>^ MORE ABOUT ^ TESTING</pattern>
+    <pattern>^ MORE ABOUT ^ TESTING ^</pattern>
     <template>Testing is the science and the art of verifying functionality and finding bugs. The tester works with the requirements,
     specifications, and design documentation to create the test plan and the test cases. A test case is a set of steps followed by a
     verification. Testers goes beyond test cases to seek out of bugs, often pushing a program to do things the developer did not intend,
@@ -446,17 +450,27 @@
 </category>
 
 <category>
-    <pattern>^ MORE ABOUT ^ DB ADMINISTRATION</pattern>
+    <pattern>^ MORE ABOUT ^ DATABASE ADMINISTRATOR ^</pattern>
     <template><srai>MORE ABOUT DB ADMIN</srai></template>
 </category>
 
 <category>
-    <pattern>^ MORE ABOUT ^ DATABASE ADMIN</pattern>
+    <pattern>^ MORE ABOUT ^ DATABASE ADMINISTRATION ^</pattern>
     <template><srai>MORE ABOUT DB ADMIN</srai></template>
 </category>
 
 <category>
-    <pattern>^ MORE ABOUT ^ DATABASE ADMINISTRATION</pattern>
+    <pattern>^ MORE ABOUT ^ DB ADMINISTRATOR ^</pattern>
+    <template><srai>MORE ABOUT DB ADMIN</srai></template>
+</category>
+
+<category>
+    <pattern>^ MORE ABOUT ^ DB ADMINISTRATION ^</pattern>
+    <template><srai>MORE ABOUT DB ADMIN</srai></template>
+</category>
+
+<category>
+    <pattern>^ MORE ABOUT ^ DATABASE ADMIN ^</pattern>
     <template><srai>MORE ABOUT DB ADMIN</srai></template>
 </category>
 
@@ -469,12 +483,12 @@
 </category>
 
 <category>
-    <pattern>^ MORE ABOUT ^ SOFTWARE DEVELOPER IN TEST</pattern>
+    <pattern>^ MORE ABOUT ^ SOFTWARE DEVELOPER IN TEST ^</pattern>
     <template><srai>MORE ABOUT SDET</srai></template>
 </category>
 
 <category>
-    <pattern>^ MORE ABOUT ^ SDET</pattern>
+    <pattern>^ MORE ABOUT ^ SDET ^</pattern>
     <template>An SDET has the skillsets of both a developer and a tester.  An SDET writes test tools and test automation, which could be in many
     forms: API, UI, Performance, and Security are widely used examples.  The same coding best practices regarding design, code reviews,
     maintainability, source control, etc., from the programming discipline apply here, and the testing best practices regarding
@@ -560,7 +574,7 @@
             </card>
             <card>
                 <image>https://dv-website.s3.amazonaws.com/uploads/2020/04/kf_sywtbdba_04092020.jpg?size=200</image>
-                <title>dB Adminstrator</title>
+                <title>dB Administrator</title>
                 <subtitle>Design &amp; Manage Databases</subtitle>
                 <button>
                     <text>dB Admin</text>
