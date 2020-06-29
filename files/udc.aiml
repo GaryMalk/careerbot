@@ -261,11 +261,11 @@
 
 <category>
     <pattern>^ CODE ^</pattern>
-    <template>Let's get started. 
+    <template>Let's get started. If you see a career you like, you can click on the link or say 'tell me more'.<br/> 
         <condition name="code">
             <li value="unknown"> <srai>ASKCODE</srai></li>
-            <li value="yes"> Since you've said you want to write code, let's look at those opportunities.<br/><srai>YESCODE</srai></li>
-            <li value="no"> Since you've said you don't want to write code, let's see some positions that don't require it.<br/><srai>NOCODE</srai></li>
+            <li value="yes">Since you've said you want to write code, let's look at those opportunities.<br/><srai>YESCODE</srai></li>
+            <li value="no">Since you've said you don't want to write code, let's see some positions that don't require it.<br/><srai>NOCODE</srai></li>
         </condition>
     </template>
 </category>
@@ -316,6 +316,10 @@
         <reply>
             <text>Test Code</text>
             <postback>TESTCODE</postback>
+        </reply>
+        <reply>
+            <text>Change to No Code</text>
+            <postback>NOCODE</postback>
         </reply>
     </template>
 </category>
@@ -377,6 +381,10 @@
         <reply>
             <text>Testing</text>
             <postback>TEST</postback>
+        </reply>
+        <reply>
+            <text>Change to Code</text>
+            <postback>YESCODE</postback>
         </reply>
     </template>
 </category>
