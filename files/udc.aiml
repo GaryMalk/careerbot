@@ -156,7 +156,7 @@
         <card>
             <image>https://www.projectmanager.com/wp-content/uploads/2019/03/project-management-software-for-mac.jpg?size=200</image>
             <title>Project Management</title>
-            <subtitle>Planning, scheduling, resourcing, coordinating, and deliving.</subtitle>
+            <subtitle>Planning, scheduling, resourcing, coordinating, and delivering.</subtitle>
             <button>
                 <text>PM</text>
                 <url>https://en.wikipedia.org/wiki/Software_project_management</url>
@@ -556,7 +556,7 @@
             <card>
                 <image>https://www.projectmanager.com/wp-content/uploads/2019/03/project-management-software-for-mac.jpg?size=200</image>
                 <title>Project Management</title>
-                <subtitle>Planning, scheduling, resourcing, coordinating, and deliving.</subtitle>
+                <subtitle>Planning, scheduling, resourcing, coordinating, and delivering.</subtitle>
                 <button>
                     <text>PM</text>
                     <url>https://en.wikipedia.org/wiki/Software_project_management</url>
