@@ -175,7 +175,7 @@
             <subtitle>Design, code, and support with updates.</subtitle>
             <button>
                 <text>Dev</text>
-                <url>https://en.wikipedia.org/wiki/Computer_programming</url>
+                <url>https://codeup.com/what-is-a-full-stack-developer</url>
             </button>
         </card>
     </template>
@@ -191,7 +191,7 @@
             <subtitle>Create web pages with JavaScript &amp; HTML.</subtitle>
             <button>
                 <text>Web Dev</text>
-                <url>https://en.wikipedia.org/wiki/Web_developer</url>
+                <url>https://www.bitdegree.org/tutorials/what-is-a-web-developer</url>
             </button>
         </card>
     </template>
@@ -237,7 +237,7 @@
             <subtitle>Find bugs, verify functionality, assure quality.</subtitle>
             <button>
                 <text>QA</text>
-                <url>https://en.wikipedia.org/wiki/Software_testing</url>
+                <url>https://usersnap.com/blog/software-testing-basics</url>
             </button>
         </card>
     </template>
@@ -265,7 +265,7 @@
         <condition name="code">
             <li value="unknown"> <srai>ASKCODE</srai></li>
             <li value="yes"> Since you've said you want to write code, let's look at those opportunities.<br/><srai>YESCODE</srai></li>
-            <li value="no"> Since you've said you don't want to write code, let's positions that don't require it.<br/><srai>NOCODE</srai></li>
+            <li value="no"> Since you've said you don't want to write code, let's see some positions that don't require it.<br/><srai>NOCODE</srai></li>
         </condition>
     </template>
 </category>
@@ -560,7 +560,7 @@
                 <subtitle>Design, code, and support with updates.</subtitle>
                 <button>
                     <text>Dev</text>
-                    <url>https://en.wikipedia.org/wiki/Computer_programming</url>
+                    <url>https://codeup.com/what-is-a-full-stack-developer</url>
                 </button>
             </card>
             <card>
@@ -569,7 +569,7 @@
                 <subtitle>Create web pages with JavaScript &amp; HTML.</subtitle>
                 <button>
                     <text>Web Dev</text>
-                    <url>https://en.wikipedia.org/wiki/Web_developer</url>
+                    <url>https://www.bitdegree.org/tutorials/what-is-a-web-developer</url>
                 </button>
             </card>
             <card>
@@ -587,7 +587,7 @@
                 <subtitle>Find bugs, verify functionality, assure quality.</subtitle>
                 <button>
                     <text>QA</text>
-                    <url>https://en.wikipedia.org/wiki/Software_testing</url>
+                    <url>https://usersnap.com/blog/software-testing-basics</url>
                 </button>
             </card>
             <card>
